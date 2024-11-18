@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'https://car-management-qevvsjwim-prachi-samuels-projects.vercel.app/api',
+  baseURL: window.location.origin,
   headers: {
     'Content-Type': 'application/json',
   },

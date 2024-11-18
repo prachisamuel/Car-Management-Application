@@ -8,12 +8,7 @@ const docsRoutes = require('./routes/docsRoutes');
 const app = express();
 const path = require('path');
 
-app.use(
-  cors({
-    origin: 'https://car-management-qevvsjwim-prachi-samuels-projects.vercel.app', // Frontend URL
-    credentials: true, // Allow cookies and auth headers
-  })
-);
+app.use(cors({ credentials: true, origin: '*' }));
 
 // Serve static files from the frontend
 app.use(express.static(path.join(__dirname, 'public')));
