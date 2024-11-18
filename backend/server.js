@@ -10,7 +10,7 @@ const path = require('path');
 
 app.use(
   cors({
-    origin: 'https://car-management-app-ecru.vercel.app', // Frontend URL
+    origin: 'https://car-management-qevvsjwim-prachi-samuels-projects.vercel.app', // Frontend URL
     credentials: true, // Allow cookies and auth headers
   })
 );
