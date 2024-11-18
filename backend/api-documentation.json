@@ -1,0 +1,258 @@
+{
+    "info": {
+      "name": "Car Management API",
+      "description": "API documentation for the Car Management Application.",
+      "version": "1.0.0",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Authentication",
+        "item": [
+          {
+            "name": "Register",
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"username\": \"testuser\",\n    \"email\": \"test@example.com\",\n    \"password\": \"password123\"\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "http://localhost:5000/api/users/register",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "users", "register"]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Login",
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"email\": \"test@example.com\",\n    \"password\": \"password123\"\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "http://localhost:5000/api/users/login",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "users", "login"]
+              }
+            },
+            "response": []
+          }
+        ]
+      },
+      {
+        "name": "Cars",
+        "item": [
+          {
+            "name": "Get All Cars",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "Bearer <your_token>",
+                  "type": "text"
+                }
+              ],
+              "url": {
+                "raw": "http://localhost:5000/api/cars",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "cars"]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Get Car by ID",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "Bearer <your_token>",
+                  "type": "text"
+                }
+              ],
+              "url": {
+                "raw": "http://localhost:5000/api/cars/:id",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "cars", ":id"],
+                "variable": [
+                  {
+                    "key": "id",
+                    "value": "car_id_here"
+                  }
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Add Car",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "Bearer <your_token>",
+                  "type": "text"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "multipart/form-data",
+                  "type": "text"
+                }
+              ],
+              "body": {
+                "mode": "formdata",
+                "formdata": [
+                  {
+                    "key": "title",
+                    "value": "New Car",
+                    "type": "text"
+                  },
+                  {
+                    "key": "description",
+                    "value": "This is a new car.",
+                    "type": "text"
+                  },
+                  {
+                    "key": "tags",
+                    "value": "SUV,Red",
+                    "type": "text"
+                  },
+                  {
+                    "key": "images",
+                    "type": "file",
+                    "src": ""
+                  }
+                ]
+              },
+              "url": {
+                "raw": "http://localhost:5000/api/cars",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "cars", "new"]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Update Car",
+            "request": {
+              "method": "PUT",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "Bearer <your_token>",
+                  "type": "text"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"title\": \"Updated Car\",\n    \"description\": \"Updated description\",\n    \"tags\": [\"Updated\", \"Tags\"]\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "http://localhost:5000/api/cars/:id",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "cars", ":id"],
+                "variable": [
+                  {
+                    "key": "id",
+                    "value": "car_id_here"
+                  }
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Delete Car",
+            "request": {
+              "method": "DELETE",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "Bearer <your_token>",
+                  "type": "text"
+                }
+              ],
+              "url": {
+                "raw": "http://localhost:5000/api/cars/:id",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "cars", ":id"],
+                "variable": [
+                  {
+                    "key": "id",
+                    "value": "car_id_here"
+                  }
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Search Cars",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "Bearer <your_token>",
+                  "type": "text"
+                }
+              ],
+              "url": {
+                "raw": "http://localhost:5000/api/cars/search?keyword=keyword_here",
+                "protocol": "http",
+                "host": ["localhost"],
+                "port": "5000",
+                "path": ["api", "cars", "search"],
+                "query": [
+                  {
+                    "key": "keyword",
+                    "value": "keyword_here"
+                  }
+                ]
+              }
+            },
+            "response": []
+          }
+        ]
+      }
+    ]
+  }
+  
