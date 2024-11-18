@@ -6,7 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Dependency directories
-node_modules/
+node_modules
 
 # Local environment variables
 .env
@@ -16,7 +16,7 @@ node_modules/
 .env.production.local
 
 # Uploaded files
-uploads/
+uploads
 
 # Cache files
 .cache/

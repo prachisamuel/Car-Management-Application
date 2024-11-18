@@ -10,8 +10,8 @@ const path = require('path');
 
 app.use(
   cors({
-    origin: 'https://car-management-app-ecru.vercel.app', // Your live frontend URL
-    credentials: true, // Allow cookies if needed
+    origin: 'https://car-management-app-ecru.vercel.app', // Frontend URL
+    credentials: true, // Allow cookies and auth headers
   })
 );
 
