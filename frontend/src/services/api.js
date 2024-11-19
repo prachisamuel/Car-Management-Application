@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'https://car-management-application-backend-yjz7.onrender.com',
+  baseURL: 'https://car-management-application-backend-yjz7.onrender.com/api',
   headers: {
     'Content-Type': 'application/json',
   },
