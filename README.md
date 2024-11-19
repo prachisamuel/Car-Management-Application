@@ -55,7 +55,7 @@ The **Car Management Application** is a full-stack project that enables users to
 - **MongoDB** with **Mongoose ORM**.
 
 ### Deployment
-- **Vercel** for hosting the frontend and backend.
+- **Render** for hosting the frontend and backend.
 
 ---
 
@@ -113,7 +113,6 @@ Ensure you have the following installed:
     ```env
     MONGO_URI=<your-mongodb-connection-string>
     JWT_SECRET=<your-jwt-secret>
-    PORT=5000
     ```
 
 4. **Run the Application Locally**
@@ -135,18 +134,22 @@ Ensure you have the following installed:
 
 ## API Documentation
 
-View the API documentation here: [Postman Documentation](https://www.postman.com/prachisamuel/workspace/public-workspace/collection/28694301-9583ec24-ef42-4a50-9c13-230a60509659?action=share&creator=28694301).
+View the API documentation here: [Postman Documentation](https://www.postman.com/prachisamuel/workspace/public-workspace/collection/28694301-f8099ed8-f099-4917-9a39-b55409ad4dac?action=share&creator=28694301).
 
 ---
 
 ## Deployment
 
-The application is deployed on **Vercel**. Both the frontend and backend are combined in the backend directory:
+The application is deployed on **Render**. Both the frontend and backend are deployed as separate services:
 
-- **Frontend**: Built React files are located in `backend/public`.
-- **Backend**: Serves APIs and static React files.
+- **Frontend**: Hosted on Render.
+    
+    **URL**: [https://car-management-application-frontend-ovn3.onrender.com](https://car-management-application-frontend-ovn3.onrender.com)
+- **Backend**: Hosted on Render.
+    
+    **URL**: [https://car-management-application-backend-yjz7.onrender.com](https://car-management-application-backend-yjz7.onrender.com)
 
-Live Deployment: [Car Management App](https://car-management-app-ecru.vercel.app)
+Ensure that your frontend `API` requests point to the backend deployment URL.
 
 ---
 
