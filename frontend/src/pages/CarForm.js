@@ -19,7 +19,7 @@ const CarForm = () => {
       // Fetch car details for editing
       const fetchCarDetails = async () => {
         try {
-          const response = await axios.get(`http://localhost:5000/api/cars/${id}`);
+          const response = await axios.get(`https://car-management-application-backend-yjz7.onrender.com/api/cars/${id}`);
           const { title, description, tags } = response.data;
 
           // Pre-fill form with existing car details
@@ -47,7 +47,7 @@ const CarForm = () => {
       if (id) {
         // Update existing car
         await axios.put(
-          `http://localhost:5000/api/cars/${id}`,
+          `https://car-management-application-backend-yjz7.onrender.com/api/cars/${id}`,
           { title, description, tags: tags.split(','), images }, // Update payload
           {
             headers: {
@@ -60,7 +60,7 @@ const CarForm = () => {
       } else {
         // Add a new car
         await axios.post(
-          'http://localhost:5000/api/cars',
+          'https://car-management-application-backend-yjz7.onrender.com/api/cars',
           formData,
           {
             headers: {
