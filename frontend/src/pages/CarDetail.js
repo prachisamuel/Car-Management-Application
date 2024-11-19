@@ -30,7 +30,7 @@ const CarDetail = () => {
       <Container maxWidth="sm" sx={{ mt: 5 }}>
         {car.images && car.images.length > 0 && (
           <img
-            src={car.images[0].startsWith('http') ? car.images[0] : `http://localhost:5000/${car.images[0]}`}
+            src={car.images[0].startsWith('http') ? car.images[0] : `https://car-management-application-backend-yjz7.onrender.com/${car.images[0]}`}
             alt={car.title}
             style={{ width: '100%', height: '300px', objectFit: 'cover' }}
           />
