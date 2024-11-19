@@ -8,7 +8,12 @@ const docsRoutes = require('./routes/docsRoutes');
 const app = express();
 const path = require('path');
 
-app.use(cors({ credentials: true, origin: '*' }));
+app.use(
+  cors({
+    origin: 'http://localhost:3000',
+    credentials: true,
+  })
+);
 
 // Serve static files from the frontend
 app.use(express.static(path.join(__dirname, 'public')));
