@@ -9,10 +9,7 @@ const app = express();
 const path = require('path');
 
 app.use(
-  cors({
-    origin: 'http://localhost:3000',
-    credentials: true,
-  })
+  cors()
 );
 
 // Serve static files from the frontend
@@ -33,6 +30,7 @@ app.use('/api', docsRoutes);
 
 // Handle React routing, return index.html for all other routes
 app.get('*', (req, res) => {
+  res.setHeader("Access-Control-Allow-Credentials","true");
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
