@@ -12,9 +12,6 @@ app.use(
   cors()
 );
 
-// Serve static files from the frontend
-app.use(express.static(path.join(__dirname, 'public')));
-
 // Serve static files from the "uploads" folder
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
